@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.5-GTNH",
+  "package": "com.rhynia.gtnh_no_zero.mixins",
+  "refmap": "mixins.gtnh_no_zero.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinRecipeAdder"
+  ],
+  "client": [],
+  "server": []
+}
