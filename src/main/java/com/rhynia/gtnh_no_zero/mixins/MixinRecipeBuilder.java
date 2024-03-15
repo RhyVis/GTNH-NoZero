@@ -25,7 +25,7 @@ public abstract class MixinRecipeBuilder {
     private final int nz_timeLimit = Config.timeLimit * 20;
 
     @Unique
-    private final boolean nz_enableFullChance = true;
+    private final boolean nz_enableFullChance = Config.enableFullChance;
 
     @ModifyReturnValue(method = "duration(I)Lgregtech/api/util/GT_RecipeBuilder;", at = @At("RETURN"))
     private GT_RecipeBuilder nz$ReduceTime(GT_RecipeBuilder original) {
