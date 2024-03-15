@@ -7,7 +7,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinEyeOfHarmonyRecipe",
-    "MixinRecipeAdder"
+    "MixinRecipeBuilder"
   ],
   "client": [],
   "server": []

@@ -8,6 +8,7 @@ public class Config {
 
     public static String greeting = "No more zero in recipe time!";
     public static int timeLimit = 30;
+    public static boolean enableFullChance = false;
 
     public static void synchronizeConfiguration(File configFile) {
         Configuration configuration = new Configuration(configFile);
@@ -20,6 +21,11 @@ public class Config {
             1,
             Integer.MAX_VALUE,
             "Those time that larger than this will be halved until less than this value, unit: seconds");
+        enableFullChance = configuration.getBoolean(
+            "enableFullChance",
+            Configuration.CATEGORY_GENERAL,
+            enableFullChance,
+            "If you're going to kill chances in recipes");
 
         if (configuration.hasChanged()) {
             configuration.save();
